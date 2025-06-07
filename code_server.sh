@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+echo Installing Coder Code Server
+
 IP=$(hostname -I | awk '{print $1}')
 YW=$(echo "\033[33m")
 BL=$(echo "\033[36m")
@@ -9,9 +11,7 @@ BGN=$(echo "\033[4;92m")
 GN=$(echo "\033[1;92m")
 DGN=$(echo "\033[32m")
 CL=$(echo "\033[m")
-BFR="\\r\\033[K"
-HOLD="-"
-CM="${GN}✓${CL}"
+
 APP="Coder Code Server"
 hostname="$(hostname)"
 set -o errexit
