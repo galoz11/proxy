@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+
+
+
 IP=$(hostname -I | awk '{print $1}')
 YW=$(echo "\033[33m")
 BL=$(echo "\033[36m")
