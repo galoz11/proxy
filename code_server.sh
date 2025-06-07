@@ -22,9 +22,9 @@ alias die='EXIT=$? LINE=$LINENO error_exit'
 trap die ERR
 
 echo "Installing Dependencies"
-apt-get update &>/dev/null
-apt-get install -y curl &>/dev/null
-apt-get install -y git &>/dev/null
+apt update &>/dev/null
+apt install -y curl &>/dev/null
+apt install -y git &>/dev/null
 echo "Installed Dependencies"
 
 VERSION=$(curl -fsSL https://api.github.com/repos/coder/code-server/releases/latest |
