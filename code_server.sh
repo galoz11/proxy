@@ -1,7 +1,12 @@
 #!/bin/bash
+function header_info {
+echo  
+echo -e "  ${DGN}${APP}${CL}"
+echo  
+}
 
-echo Installing Coder Code Server
-
+APP="Coder Code Server"
+hostname="$(hostname)"
 IP=$(hostname -I | awk '{print $1}')
 YW=$(echo "\033[33m")
 BL=$(echo "\033[36m")
@@ -10,17 +15,31 @@ BGN=$(echo "\033[4;92m")
 GN=$(echo "\033[1;92m")
 DGN=$(echo "\033[32m")
 CL=$(echo "\033[m")
+# print overwrite message
+BFR="\\r\\033[K"
+HOLD="-"
+CM="${GN}✓${CL}"
 
-APP="Coder Code Server"
-hostname="$(hostname)"
-set -o errexit
-set -o errtrace
-set -o nounset
-set -o pipefail
-shopt -s expand_aliases
-alias die='EXIT=$? LINE=$LINENO error_exit'
-trap die ERR
-
+# show header info
+header_info
+# Can't Install on Proxmox or Alpine
+if command -v pveversion >/dev/null 2>&1; then
+  echo -e "   Can't Install on Proxmox "
+  exit
+fi
+if [ -e /etc/alpine-release ]; then
+  echo -e "   Can't Install on Alpine"
+  exit
+fi
+while true; do
+  read -p "This will Install ${APP} on $hostname. Proceed(y/n)?" yn
+  case $yn in
+  [Yy]*) break ;;
+  [Nn]*) exit ;;
+  *) echo "Please answer yes or no." ;;
+  esac
+done
+# ----------------------installing---------------------------------
 echo "Installing Dependencies"
 apt update &>/dev/null
 apt install -y curl &>/dev/null
