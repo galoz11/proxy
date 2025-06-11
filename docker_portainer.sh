@@ -60,7 +60,14 @@ if [ "$(docker ps -a -q -f name=^/${CONTAINER}$)" ]; then
 else
   echo -e "${CN} '$CONTAINER' does not exist, creating it now"
   docker volume create portainer_data &>/dev/null
-  docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest &>/dev/null
+  docker run -d \
+  -p 8000:8000 \
+  -p 9443:9443 \
+  --name portainer \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/portainer-ce:latest &>/dev/null
   echo -e "${BFR}${BFR}${CM} $CONTAINER installed"
   echo -e "Portainer should be reachable by going to the following URL.
            ${BL}https://$IP:9443${CL} \n"
