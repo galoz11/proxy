@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function header_info {
 echo  
 echo -e "  ${DGN}${APP}${CL}"
@@ -39,7 +40,7 @@ while true; do
   *) echo "Please answer yes or no." ;;
   esac
 done
-# ----------------------installing---------------------------------
+# ----------------------installing--------------------------------- 
 echo "Installing Dependencies"
 apt update &>/dev/null
 apt install -y curl &>/dev/null
