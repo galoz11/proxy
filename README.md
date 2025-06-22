@@ -12,7 +12,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads/main/docker_portainer.sh)"
 
-```ruby
+```python
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
