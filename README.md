@@ -13,24 +13,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads/main/docker_portainer.sh)"
 
 
-=== "C"
+=== "Tab 1"
+    Tab 1 content
 
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
-
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
+=== "Tab 2"
+    Tab 2 content
