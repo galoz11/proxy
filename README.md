@@ -18,4 +18,9 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-<pre> ```python def hello(): print("Hello, world!") ``` </pre>
+<pre> 
+```
+python def hello():
+ print("Hello, world!")
+```
+</pre>
