@@ -12,9 +12,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads/main/docker_portainer.sh)"
 
-
-=== "Tab 1"
-    Tab 1 content
-
-=== "Tab 2"
-    Tab 2 content
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
