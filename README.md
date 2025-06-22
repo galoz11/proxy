@@ -13,25 +13,24 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads/main/docker_portainer.sh)"
 
 
-<!-- Tabs navigation -->
-<ul>
-  <li><a href="#bash">Bash</a></li>
-  <li><a href="#python">Python</a></li>
-  <li><a href="#nodejs">Node.js</a></li>
-</ul>
+=== "C"
 
-<!-- Bash Tab -->
-<h3 id="bash">Bash</h3>
+    ``` c
+    #include <stdio.h>
 
-```bash
-echo "Hello from Bash!"
-
-=== "Python"
-    ```python
-    print("Hello from Python")
+    int main(void) {
+      printf("Hello world!\n");
+      return 0;
+    }
     ```
 
-=== "JavaScript"
-    ```javascript
-    console.log("Hello from JavaScript");
+=== "C++"
+
+    ``` c++
+    #include <iostream>
+
+    int main(void) {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
     ```
