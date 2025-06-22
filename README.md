@@ -22,3 +22,11 @@ puts markdown.to_html
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
