@@ -26,3 +26,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/galoz11/proxy/refs/heads
 ```bash
 echo "Hello from Bash!"
 
+=== "Python"
+    ```python
+    print("Hello from Python")
+    ```
+
+=== "JavaScript"
+    ```javascript
+    console.log("Hello from JavaScript");
+    ```
